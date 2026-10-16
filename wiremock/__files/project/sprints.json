@@ -1,0 +1,37 @@
+{
+  "sprints": [
+    {
+      "id": 1,
+      "name": "Sprint 1",
+      "shortName": "S1",
+      "storyPointsPlanned": 40,
+      "storyPointsDone": 35,
+      "velocityPercent": 87.5,
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "name": "Sprint 2",
+      "shortName": "S2",
+      "storyPointsPlanned": 45,
+      "storyPointsDone": 30,
+      "velocityPercent": 66.7,
+      "status": "completed"
+    },
+    {
+      "id": 3,
+      "name": "Sprint 3",
+      "shortName": "S3",
+      "storyPointsPlanned": 50,
+      "storyPointsDone": 25,
+      "velocityPercent": 50.0,
+      "status": "completed"
+    }
+  ],
+  "summary": {
+    "totalPlanned": 135,
+    "totalDone": 90,
+    "averageVelocityPercent": 68.1,
+    "trend": "declining"
+  }
+}

@@ -1,0 +1,64 @@
+# Pre-commit configuration for DBLinter App
+# To install: pre-commit install
+# To run manually: pre-commit run --all-files
+
+repos:
+  # General hooks (trailing whitespace, EOF, YAML, etc.)
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: [--unsafe] # Allow GitHub Actions templates
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: mixed-line-ending
+
+  # ESLint for TypeScript/JavaScript
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.16.0
+    hooks:
+      - id: eslint
+        files: \.(js|jsx|ts|tsx)$
+        args:
+          - --config=eslint.config.js
+          - --fix
+        additional_dependencies:
+          - eslint@9.16.0
+          - typescript-eslint@8.18.2
+          - eslint-plugin-react-hooks@5.1.0
+          - eslint-plugin-react-refresh@0.4.16
+          - "@next/eslint-plugin-next@15.1.4"
+
+  # Prettier for code formatting
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.0
+    hooks:
+      - id: prettier
+        files: \.(js|jsx|ts|tsx|json|css|scss|md|yml|yaml)$
+        args: [--write]
+
+  # TypeScript type checking
+  - repo: local
+    hooks:
+      - id: tsc
+        name: TypeScript type check (frontend)
+        entry: node_modules/.bin/tsc --noEmit
+        language: system
+        files: ^src/.*\.(ts|tsx)$
+        pass_filenames: false
+
+  # Tests unitaires (optionnel - peut être lent)
+  # Décommenter si tu veux lancer les tests avant chaque commit
+  # - repo: local
+  #   hooks:
+  #     - id: vitest
+  #       name: Run unit tests
+  #       entry: npm run test:unit
+  #       language: system
+  #       pass_filenames: false
+  #       always_run: true

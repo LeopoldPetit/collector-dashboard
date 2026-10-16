@@ -1,0 +1,13 @@
+{
+  "bugs": {
+    "detected": 320,
+    "fixed": 180,
+    "open": 140,
+    "fixRate": 56.25
+  },
+  "features": {
+    "delivered": 60,
+    "bugRate": 5.33
+  },
+  "period": "monthly"
+}

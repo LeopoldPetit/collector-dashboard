@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-05-07T00:00:00Z",
+  "period": "2026-04",
+  "company": "StreamFlow",
+  "globalStatus": "critical",
+  "technical": {
+    "errorRate": {
+      "value": 4.0,
+      "unit": "%",
+      "status": "critical",
+      "threshold": 1.0
+    },
+    "avgResponseTime": {
+      "value": 562,
+      "unit": "ms",
+      "status": "warning",
+      "threshold": 300
+    },
+    "p95ResponseTime": {
+      "value": 2500,
+      "unit": "ms",
+      "status": "critical",
+      "threshold": 500
+    },
+    "uptime": {
+      "value": 99.1,
+      "unit": "%",
+      "status": "warning",
+      "threshold": 99.9
+    },
+    "mttr": {
+      "value": 1.625,
+      "unit": "h",
+      "status": "warning",
+      "threshold": 1.0
+    }
+  },
+  "project": {
+    "velocityS1": { "value": 87.5, "unit": "%", "status": "ok" },
+    "velocityS2": { "value": 66.7, "unit": "%", "status": "warning" },
+    "velocityS3": { "value": 50.0, "unit": "%", "status": "critical" },
+    "bugRate": { "value": 5.33, "unit": "bugs/feat", "status": "critical" },
+    "fixRate": {
+      "value": 56.25,
+      "unit": "%",
+      "status": "critical",
+      "threshold": 80.0
+    }
+  },
+  "devops": {
+    "deployFrequency": { "value": 1.33, "unit": "/day", "status": "ok" },
+    "changeFailureRate": {
+      "value": 30.0,
+      "unit": "%",
+      "status": "critical",
+      "threshold": 5.0
+    },
+    "leadTime": {
+      "value": 5,
+      "unit": "days",
+      "status": "warning",
+      "threshold": 1.0
+    }
+  },
+  "business": {
+    "churnRate": {
+      "value": 33.3,
+      "unit": "%",
+      "status": "critical",
+      "threshold": 5.0
+    },
+    "retentionRate": {
+      "value": 66.7,
+      "unit": "%",
+      "status": "critical",
+      "threshold": 80.0
+    },
+    "arpu": { "value": 10.0, "unit": "€", "status": "ok" },
+    "conversionRate": {
+      "value": 4.0,
+      "unit": "%",
+      "status": "warning",
+      "threshold": 5.0
+    }
+  }
+}

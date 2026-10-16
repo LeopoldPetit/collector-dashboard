@@ -1,0 +1,20 @@
+{
+  "deployments": {
+    "total": 40,
+    "successful": 28,
+    "failed": 12,
+    "changeFailureRate": 30.0,
+    "frequencyPerDay": 1.33,
+    "periodDays": 30
+  },
+  "leadTime": {
+    "averageDays": 5,
+    "unit": "days"
+  },
+  "team": {
+    "developers": 15,
+    "devops": 2,
+    "productOwner": 1,
+    "cto": 1
+  }
+}

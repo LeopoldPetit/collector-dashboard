@@ -1,0 +1,23 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "text": "Deployment pipeline completed",
+      "time": "2 min ago",
+      "severity": "ok"
+    },
+    {
+      "id": 2,
+      "text": "Critical incident detected on API",
+      "time": "14 min ago",
+      "severity": "critical"
+    },
+    {
+      "id": 3,
+      "text": "Sprint #12 review scheduled",
+      "time": "1h ago",
+      "severity": "info"
+    }
+  ],
+  "unreadCount": 3
+}

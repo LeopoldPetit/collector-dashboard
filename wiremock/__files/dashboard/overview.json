@@ -1,0 +1,81 @@
+{
+  "kpis": [
+    {
+      "title": "Uptime",
+      "value": 99.1,
+      "unit": "%",
+      "status": "warning",
+      "trend": -0.8,
+      "description": "vs last month"
+    },
+    {
+      "title": "Open Incidents",
+      "value": 4,
+      "unit": null,
+      "status": "warning",
+      "trend": -25,
+      "description": "vs last week"
+    },
+    {
+      "title": "Deploys Today",
+      "value": 12,
+      "unit": null,
+      "status": "ok",
+      "trend": 20,
+      "description": "vs yesterday"
+    },
+    {
+      "title": "Avg Response",
+      "value": 562,
+      "unit": "ms",
+      "status": "warning",
+      "trend": 8,
+      "description": "vs last hour"
+    }
+  ],
+  "requestVolume": [
+    { "time": "00:00", "requests": 820 },
+    { "time": "04:00", "requests": 400 },
+    { "time": "08:00", "requests": 1200 },
+    { "time": "12:00", "requests": 1800 },
+    { "time": "16:00", "requests": 2400 },
+    { "time": "20:00", "requests": 1600 },
+    { "time": "23:59", "requests": 900 }
+  ],
+  "weeklyDeploys": [
+    { "day": "Mon", "deploys": 4, "failures": 1 },
+    { "day": "Tue", "deploys": 7, "failures": 0 },
+    { "day": "Wed", "deploys": 5, "failures": 2 },
+    { "day": "Thu", "deploys": 9, "failures": 0 },
+    { "day": "Fri", "deploys": 12, "failures": 1 },
+    { "day": "Sat", "deploys": 3, "failures": 0 },
+    { "day": "Sun", "deploys": 2, "failures": 0 }
+  ],
+  "recentActivity": [
+    {
+      "label": "Deployment #247 succeeded on production",
+      "time": "2 min ago",
+      "severity": "ok"
+    },
+    {
+      "label": "Incident #88 — API latency spike detected",
+      "time": "14 min ago",
+      "severity": "critical"
+    },
+    {
+      "label": "Sprint #12 review scheduled for tomorrow",
+      "time": "1h ago",
+      "severity": "info"
+    },
+    {
+      "label": "SonarQube scan passed (coverage 84%)",
+      "time": "3h ago",
+      "severity": "ok"
+    },
+    {
+      "label": "New team member onboarded: Marc D.",
+      "time": "5h ago",
+      "severity": "warning"
+    }
+  ]
+}

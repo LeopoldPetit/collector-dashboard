@@ -1,0 +1,7 @@
+{
+  "port": 8080,
+  "rootDir": ".",
+  "mappingsDir": "mappings",
+  "filesDir": "__files",
+  "extensions": []
+}

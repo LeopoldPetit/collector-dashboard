@@ -1,0 +1,42 @@
+{
+  "incidents": [
+    {
+      "id": 1,
+      "title": "Lenteur chargement vidéos",
+      "durationHours": 2,
+      "durationMinutes": 120,
+      "severity": "high",
+      "status": "resolved"
+    },
+    {
+      "id": 2,
+      "title": "Erreurs paiement en production",
+      "durationHours": 1,
+      "durationMinutes": 60,
+      "severity": "critical",
+      "status": "resolved"
+    },
+    {
+      "id": 3,
+      "title": "Indisponibilité partielle API",
+      "durationHours": 3,
+      "durationMinutes": 180,
+      "severity": "critical",
+      "status": "resolved"
+    },
+    {
+      "id": 4,
+      "title": "Timeout base de données",
+      "durationHours": 0.5,
+      "durationMinutes": 30,
+      "severity": "medium",
+      "status": "resolved"
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "totalDowntimeHours": 6.5,
+    "mttrHours": 1.625,
+    "periodDays": 30
+  }
+}

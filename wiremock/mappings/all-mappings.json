@@ -1,0 +1,125 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/technical/overview"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "technical/overview.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/technical/response-times"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "technical/response-times.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/technical/incidents"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "technical/incidents.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/project/overview"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "project/overview.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/project/sprints"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "project/sprints.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/devops/overview"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "devops/overview.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/business/overview"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "business/overview.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/business/users"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "business/users.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/kpis/summary"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "kpis/summary.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/dashboard/overview"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "dashboard/overview.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/notifications"
+      },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "bodyFileName": "notifications/notifications.json"
+      }
+    }
+  ]
+}

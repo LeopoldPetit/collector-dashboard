@@ -1,0 +1,22 @@
+{
+  "revenue": {
+    "total": 1000000,
+    "currency": "EUR",
+    "period": "monthly"
+  },
+  "arpu": {
+    "value": 10.0,
+    "currency": "EUR"
+  },
+  "subscriptionPrice": 9.99,
+  "conversions": {
+    "visitors": 200000,
+    "newSubscriptions": 8000,
+    "conversionRate": 4.0
+  },
+  "churn": {
+    "churnedUsers": 40000,
+    "churnRate": 33.3,
+    "retentionRate": 66.7
+  }
+}

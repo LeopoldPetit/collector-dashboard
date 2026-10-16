@@ -1,0 +1,65 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: streamflow_db
+    environment:
+      POSTGRES_DB: streamflow
+      POSTGRES_USER: streamflow
+      POSTGRES_PASSWORD: streamflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U streamflow -d streamflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  flyway:
+    image: flyway/flyway:10-alpine
+    container_name: streamflow_flyway
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./db/migrations:/flyway/sql
+    command: >
+      -url=jdbc:postgresql://postgres:5432/streamflow
+      -user=streamflow
+      -password=streamflow
+      -connectRetries=5
+      migrate
+
+  backend:
+    image: node:20-alpine
+    container_name: streamflow_backend
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: streamflow
+      DB_USER: streamflow
+      DB_PASSWORD: streamflow
+      PORT: 3001
+      INGEST_TOKEN: ${INGEST_TOKEN:-dev-ingest-token}
+    ports:
+      - "3001:3001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      flyway:
+        condition: service_completed_successfully
+    command: sh -c "npm install --silent && npx ts-node-dev --respawn --transpile-only src/index.ts"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3001/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  postgres_data:

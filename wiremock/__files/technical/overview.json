@@ -1,0 +1,19 @@
+{
+  "totalRequests": 1200000,
+  "errorRequests": 48000,
+  "errorRate": 4.0,
+  "uptime": {
+    "totalHours": 720,
+    "downtimeHours": 6.5,
+    "uptimePercent": 99.1
+  },
+  "mttr": {
+    "averageHours": 1.625,
+    "unit": "hours"
+  },
+  "responseTimes": {
+    "average": 562,
+    "p95": 2500,
+    "unit": "ms"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "users": {
+    "total": 250000,
+    "activeMonthly": 100000,
+    "startOfMonth": 120000,
+    "endOfMonth": 100000,
+    "newThisMonth": 20000,
+    "churnedThisMonth": 40000
+  },
+  "evolution": [
+    { "label": "Début du mois", "value": 120000 },
+    { "label": "Fin du mois", "value": 100000 }
+  ]
+}
